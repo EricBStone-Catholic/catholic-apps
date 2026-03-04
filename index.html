@@ -33,7 +33,7 @@
     background: var(--parchment);
     color: var(--ink);
     font-family: 'EB Garamond', Georgia, serif;
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.7;
     background-image: 
       radial-gradient(ellipse at top, #ede4cf 0%, #f8f3e8 60%),
@@ -129,10 +129,11 @@
 
   .rubric {
     font-style: italic;
-    color: var(--rubric);
-    font-size: 0.92rem;
-    margin: 0.7rem 0 0.3rem;
+    color: #6b1010;
+    font-size: 1rem;
+    margin: 0.8rem 0 0.4rem;
     padding-left: 0.5rem;
+    line-height: 1.6;
   }
 
   .priest-line, .response-line, .both-line {
@@ -196,7 +197,7 @@
     border: 1px solid var(--gold-light);
     border-radius: 6px;
     padding: 0.7rem 1rem;
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     color: var(--ink-soft);
     margin: 0.6rem 0;
     font-style: italic;
@@ -290,7 +291,7 @@
   }
 
   @media (max-width: 600px) {
-    body { font-size: 15px; }
+    body { font-size: 16px; }
     .speaker { width: 50px; font-size: 0.62rem; }
     .toc-grid { grid-template-columns: 1fr; }
     .priest-line, .response-line, .both-line { padding: 0.55rem 0.8rem; }
@@ -328,6 +329,32 @@
     margin-top: 2.5rem;
     letter-spacing: 0.08em;
   }
+
+  /* Latin/English toggle */
+  .lang-toggle {
+    display: inline-flex;
+    border: 1px solid var(--gold-light);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0.8rem 0 0.4rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+  }
+  .lang-toggle button {
+    background: none;
+    border: none;
+    padding: 0.3rem 0.9rem;
+    cursor: pointer;
+    color: var(--ink-soft);
+    transition: all 0.15s;
+  }
+  .lang-toggle button.active {
+    background: var(--gold);
+    color: white;
+  }
+  /* lang visibility controlled entirely by JS inline styles */
+
 </style>
 </head>
 <body>
@@ -415,13 +442,31 @@
 
   <p class="rubric">On some days, especially feasts and Sundays, <strong>Form C (Kyrie)</strong> is used instead &mdash; a beautiful ancient exchange:</p>
 
-  <div class="exchange">
-    <div class="priest-line"><span class="speaker">Cantor</span><span>Lord, have mercy. <em>(Kyrie eleison)</em></span></div>
-    <div class="response-line"><span class="speaker">People</span><span>Lord, have mercy.</span></div>
-    <div class="priest-line"><span class="speaker">Cantor</span><span>Christ, have mercy. <em>(Christe eleison)</em></span></div>
-    <div class="response-line"><span class="speaker">People</span><span>Christ, have mercy.</span></div>
-    <div class="priest-line"><span class="speaker">Cantor</span><span>Lord, have mercy.</span></div>
-    <div class="response-line"><span class="speaker">People</span><span>Lord, have mercy.</span></div>
+  <div id="kyrie-section">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="english" onclick="setLang('kyrie-section','english')">English</button>
+      <button class="lang-btn" data-lang="latin" onclick="setLang('kyrie-section','latin')">Latin</button>
+    </div>
+    <div class="lang-english">
+      <div class="exchange">
+        <div class="priest-line"><span class="speaker">Cantor</span><span>Lord, have mercy.</span></div>
+        <div class="response-line"><span class="speaker">People</span><span>Lord, have mercy.</span></div>
+        <div class="priest-line"><span class="speaker">Cantor</span><span>Christ, have mercy.</span></div>
+        <div class="response-line"><span class="speaker">People</span><span>Christ, have mercy.</span></div>
+        <div class="priest-line"><span class="speaker">Cantor</span><span>Lord, have mercy.</span></div>
+        <div class="response-line"><span class="speaker">People</span><span>Lord, have mercy.</span></div>
+      </div>
+    </div>
+    <div class="lang-latin" style="display:none">
+      <div class="exchange">
+        <div class="priest-line"><span class="speaker">Cantor</span><span>Kyrie, eleison.</span></div>
+        <div class="response-line"><span class="speaker">People</span><span>Kyrie, eleison.</span></div>
+        <div class="priest-line"><span class="speaker">Cantor</span><span>Christe, eleison.</span></div>
+        <div class="response-line"><span class="speaker">People</span><span>Christe, eleison.</span></div>
+        <div class="priest-line"><span class="speaker">Cantor</span><span>Kyrie, eleison.</span></div>
+        <div class="response-line"><span class="speaker">People</span><span>Kyrie, eleison.</span></div>
+      </div>
+    </div>
   </div>
 
   <div class="note">When the Confiteor is used, the Kyrie usually follows it. When sung, each phrase is typically repeated twice or three times.</div>
@@ -597,12 +642,30 @@
   <p class="rubric">The priest sings or says the Preface (a prayer of thanksgiving). It ends leading into the Sanctus:</p>
 
   <div class="section-title">Sanctus (Holy, Holy, Holy)</div>
-  <div class="full-text">
-    Holy, Holy, Holy Lord God of hosts.<br>
-    Heaven and earth are full of your glory.<br>
-    Hosanna in the highest.<br>
-    Blessed is he who comes in the name of the Lord.<br>
-    Hosanna in the highest.
+  <div id="sanctus-section">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="english" onclick="setLang('sanctus-section','english')">English</button>
+      <button class="lang-btn" data-lang="latin" onclick="setLang('sanctus-section','latin')">Latin</button>
+    </div>
+    <div class="lang-english">
+      <div class="full-text">
+        Holy, Holy, Holy Lord God of hosts.<br>
+        Heaven and earth are full of your glory.<br>
+        Hosanna in the highest.<br>
+        Blessed is he who comes in the name of the Lord.<br>
+        Hosanna in the highest.
+      </div>
+    </div>
+    <div class="lang-latin" style="display:none">
+      <div class="full-text">
+        Sanctus, Sanctus, Sanctus<br>
+        Dominus Deus Sabaoth.<br>
+        Pleni sunt caeli et terra gloria tua.<br>
+        Hosanna in excelsis.<br>
+        Benedictus qui venit in nomine Domini.<br>
+        Hosanna in excelsis.
+      </div>
+    </div>
   </div>
   <p class="rubric">All kneel after the Sanctus (in most parishes).</p>
 
@@ -670,10 +733,25 @@
   <div class="section-title">Agnus Dei (Lamb of God)</div>
   <p class="rubric">The priest breaks the consecrated host (the Fraction). The congregation sings or says:</p>
 
-  <div class="full-text">
-    Lamb of God, you take away the sins of the world, have mercy on us.<br>
-    Lamb of God, you take away the sins of the world, have mercy on us.<br>
-    Lamb of God, you take away the sins of the world, grant us peace.
+  <div id="agnus-section">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="english" onclick="setLang('agnus-section','english')">English</button>
+      <button class="lang-btn" data-lang="latin" onclick="setLang('agnus-section','latin')">Latin</button>
+    </div>
+    <div class="lang-english">
+      <div class="full-text">
+        Lamb of God, you take away the sins of the world, have mercy on us.<br>
+        Lamb of God, you take away the sins of the world, have mercy on us.<br>
+        Lamb of God, you take away the sins of the world, grant us peace.
+      </div>
+    </div>
+    <div class="lang-latin" style="display:none">
+      <div class="full-text">
+        Agnus Dei, qui tollis peccata mundi, miserere nobis.<br>
+        Agnus Dei, qui tollis peccata mundi, miserere nobis.<br>
+        Agnus Dei, qui tollis peccata mundi, dona nobis pacem.
+      </div>
+    </div>
   </div>
 
   <!-- COMMUNION -->
@@ -758,5 +836,22 @@
   </div>
 
 </div>
+
+<script>
+function setLang(section, lang) {
+  var container = document.getElementById(section);
+  if (!container) return;
+  container.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  container.querySelectorAll('.lang-latin').forEach(function(el) {
+    el.style.display = lang === 'latin' ? 'block' : 'none';
+  });
+  container.querySelectorAll('.lang-english').forEach(function(el) {
+    el.style.display = lang === 'english' ? 'block' : 'none';
+  });
+}
+</script>
+
 </body>
 </html>
