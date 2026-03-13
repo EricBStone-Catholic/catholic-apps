@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rosary">
+<meta name="theme-color" content="#8b1a1a">
+<title>The Holy Rosary</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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9V4pDEglAgAaCa/+0R8DpAMBAC2MFovRK/sbrx+mEwAdEAAAoCkCAOlXUfNfohMAHRAAAKApAgAANEUAAICmCAAA0BQBgPTbl8/LJb7RvfzKCdYDI/UIAADQFAEALVTUCaD5D00QANBIlAyodLAISC4CALqQjfrw+s5uoNAK20FDI84M4HoAAAEA7fh2BSj90BABgPSLsquP72NIBaQbAYCUGy0WT85+UN33Hup+mgxAinESGAA0RQAAgKYYAoI28p33bxcXmnccgCroAQCApugBQF+v/Zc/kzde/eufNvdIgKagBwBN2dXfdRvQBwEAHXkrPhkADREAwF1kAHRDAACApggAANAUAQAAmiIAgLuYDArdEADQkbfWU/2hIQIAADTFSmCoK8o+/ok4BvaUhpoIACiqln384xLXAXBdAaiJISAA0BQBAACaIgAAQFMEAABoigAAAE0RAACgKaaBIklq2bH51Td/HvI8Me4FzaJiJAU9AADQFAEAAJoiAABAUwQAAGiKk8BIkrjOr7761z91nfXlzC00RA8AADRFAACApggAANAUAQAAmiIAAEBTBAAAaIppoFDUvnz+UPfTsTxV1Vd2jOsAuB4k1EQAQF2x1M0ar+pO7UaKMQQEAJoiAABAUwQAAGiKAAAATREAAKApAgAANEUAAICmCAAA0BQBAACaIgAAQFMEAABoigAAAE0RAACgKQIAADRFAACApggAANAUAQAAmiIAAEBTBAAAaIoAAABNEQAAoCkCAAA0RQAAgKYIAADQFAEAAJoiAABAUwQAAGiKAAAATREAAKApAgAANEUAAICmCAAA0BQBAACaIgAAQFMEAABoigAAAE0RAACgKQIAADRFAACApggAANAUAQAAmiIAAEBTBAAAaIoAAABNZZt9AEBzvPrXP232IQBNRg8AADRFAACAphgCgjaKC80+AkAt9AAAQFMEAABoigAAAE0RAACgKU4CI+X25fOHup+u+nvjPRhAKQQA0o86DvhiCAgANEUAAICmCAAA0BQBAACaIgAAQFMEAABoigAAAE0RAACgKQIAADRFAACApggAANAUAQAAmiIAAEBTBAAAaIoAAABNEQAAoCkCAAA0RQAAgKYIAADQFAEAAJoiAABAUwQAAGiKAAAATREAAKApAgAANEUAAICmCAAA0BQBAACaIgAAQFMEAABoigAA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">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #b8963e;
+    --gold-light: #d4b56a;
+    --crimson: #8b1a1a;
+    --parchment: #f8f3e8;
+    --parchment-dark: #ede4cf;
+    --ink: #1a1209;
+    --ink-soft: #3d2e1a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--parchment);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%23b8963e' stroke-width='0.4' opacity='0.18'%3E%3Cline x1='30' y1='8' x2='30' y2='52'/%3E%3Cline x1='8' y1='30' x2='52' y2='30'/%3E%3C/g%3E%3C/svg%3E");
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 19px;
+    color: var(--ink);
+    line-height: 1.7;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 1.5rem 1.2rem;
+    padding-top: calc(1.5rem + env(safe-area-inset-top));
+  }
+
+  /* Header */
+  .app-header {
+    text-align: center;
+    padding: 1.5rem 0 1rem;
+    border-bottom: 2px solid var(--gold-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .cross-ornament {
+    color: var(--gold);
+    font-size: 1.4rem;
+    letter-spacing: 0.3em;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  h1.title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    color: var(--crimson);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+  }
+
+  .subtitle {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1rem;
+  }
+
+  /* Mystery selector */
+  .mystery-selector {
+    background: var(--parchment-dark);
+    border: 1px solid var(--gold-light);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mystery-day {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .mystery-title-display {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: var(--crimson);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+
+  .mystery-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .mystery-pill {
+    background: none;
+    border: 1px solid var(--gold-light);
+    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .mystery-pill.active {
+    background: var(--crimson);
+    border-color: var(--crimson);
+    color: #f5edda;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: var(--crimson);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 1.5rem 0 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--gold-light);
+  }
+
+  .mystery-header {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--crimson);
+    font-weight: 600;
+    margin: 2rem 0 0.3rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--parchment-dark);
+    border-left: 4px solid var(--crimson);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .mystery-number {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.1rem;
+  }
+
+  /* Prayers */
+  .full-text {
+    background: #faf6ee;
+    border-left: 4px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    padding: 0.8rem 1.1rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+    line-height: 1.8;
+  }
+
+  /* Rubric */
+  .rubric {
+    font-style: italic;
+    color: #6b1010;
+    font-size: 1rem;
+    margin: 0.8rem 0 0.4rem;
+    padding-left: 0.5rem;
+    line-height: 1.6;
+  }
+
+  /* Fruit block */
+  .fruit-block {
+    background: var(--parchment-dark);
+    border: 1px solid var(--gold-light);
+    border-radius: 6px;
+    padding: 0.5rem 0.9rem;
+    margin: 0.5rem 0 0.8rem;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+
+  .fruit-block strong {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Meditation */
+  .meditation {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 0.97rem;
+    margin: 0.3rem 0 0.5rem;
+    padding-left: 0.5rem;
+    border-left: 2px solid var(--gold-light);
+    line-height: 1.6;
+  }
+
+  /* Divider */
+  .divider {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+    margin: 1.5rem 0;
+  }
+
+  /* Note */
+  .note {
+    background: var(--parchment-dark);
+    border: 1px solid var(--gold-light);
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin: 0.6rem 0;
+    line-height: 1.6;
+  }
+
+  /* Install tip */
+  .install-tip {
+    margin: 2rem 0 0;
+    background: var(--parchment-dark);
+    border: 1px solid var(--gold-light);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+
+  .install-tip strong.tip-title {
+    font-family: 'Cinzel', serif;
+    color: var(--crimson);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Mystery sections hidden by default */
+  .mystery-set { display: none; }
+  .mystery-set.active { display: block; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="app-header">
+    <span class="cross-ornament">&#10011; &middot; &#10011; &middot; &#10011;</span>
+    <h1 class="title">The Holy Rosary</h1>
+    <p class="subtitle">A Complete Guide for Every Day</p>
+  </div>
+
+  <!-- Mystery Selector -->
+  <div class="mystery-selector">
+    <div class="mystery-day" id="day-label">Today&rsquo;s Mysteries</div>
+    <div class="mystery-title-display" id="mystery-title-display">The Glorious Mysteries</div>
+    <div class="mystery-pills">
+      <button class="mystery-pill" data-set="joyful" onclick="setMysteries('joyful')">Joyful</button>
+      <button class="mystery-pill" data-set="sorrowful" onclick="setMysteries('sorrowful')">Sorrowful</button>
+      <button class="mystery-pill" data-set="glorious" onclick="setMysteries('glorious')">Glorious</button>
+      <button class="mystery-pill" data-set="luminous" onclick="setMysteries('luminous')">Luminous</button>
+  </div>
+
+  <!-- OPENING -->
+  <div class="section-title">Opening</div>
+
+  <p class="rubric">Begin by making the Sign of the Cross:</p>
+  <div class="full-text">
+    In the name of the Father,<br>
+    and of the Son,<br>
+    and of the Holy Spirit.<br>
+    Amen.
+  </div>
+
+  <div class="section-title">Apostles&rsquo; Creed</div>
+  <p class="rubric">Hold the crucifix and pray:</p>
+  <div class="full-text">
+    I believe in God, the Father almighty,<br>
+    Creator of heaven and earth,<br>
+    and in Jesus Christ, his only Son, our Lord,<br>
+    who was conceived by the Holy Spirit,<br>
+    born of the Virgin Mary,<br>
+    suffered under Pontius Pilate,<br>
+    was crucified, died and was buried;<br>
+    he descended into hell;<br>
+    on the third day he rose again from the dead;<br>
+    he ascended into heaven,<br>
+    and is seated at the right hand of God the Father almighty;<br>
+    from there he will come to judge the living and the dead.<br>
+    I believe in the Holy Spirit,<br>
+    the holy catholic Church,<br>
+    the communion of saints,<br>
+    the forgiveness of sins,<br>
+    the resurrection of the body,<br>
+    and life everlasting.<br>
+    Amen.
+  </div>
+
+        <div class="divider">&#10011; &middot; &#10011; &middot; &#10011;</div>
+
+  <!-- JOYFUL MYSTERIES -->
+  <div class="mystery-set" id="set-joyful">
+    <div class="section-title">The Joyful Mysteries</div>
+    <p class="rubric">Monday &amp; Saturday</p>
+
+    <div class="mystery-header"><span class="mystery-number">First Mystery</span>The Annunciation</div>
+    <p class="meditation">The Angel Gabriel announces to Mary that she will conceive the Son of God, and she responds with perfect trust: &ldquo;Be it done unto me according to thy word.&rdquo;</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Humility</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Second Mystery</span>The Visitation</div>
+    <p class="meditation">Mary visits her cousin Elizabeth, who is filled with the Holy Spirit and recognizes the Lord in Mary&rsquo;s womb.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Love of Neighbor</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Third Mystery</span>The Nativity</div>
+    <p class="meditation">Jesus, the Son of God, is born in a stable in Bethlehem, wrapped in swaddling clothes and laid in a manger.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Poverty of Spirit / Detachment</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Fourth Mystery</span>The Presentation</div>
+    <p class="meditation">Mary and Joseph present the infant Jesus in the Temple, fulfilling the Law, and Simeon prophesies that a sword will pierce Mary&rsquo;s own soul.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Obedience</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Fifth Mystery</span>The Finding in the Temple</div>
+    <p class="meditation">After three days of searching, Mary and Joseph find the twelve-year-old Jesus in the Temple, seated among the teachers, about his Father&rsquo;s business.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Zeal for the Things of God</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+  </div>
+
+  <!-- SORROWFUL MYSTERIES -->
+  <div class="mystery-set" id="set-sorrowful">
+    <div class="section-title">The Sorrowful Mysteries</div>
+    <p class="rubric">Tuesday &amp; Friday</p>
+
+    <div class="mystery-header"><span class="mystery-number">First Mystery</span>The Agony in the Garden</div>
+    <p class="meditation">Jesus prays in Gethsemane, so anguished that his sweat falls like drops of blood, yet he submits perfectly to the Father&rsquo;s will.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Contrition / Conformity to God&rsquo;s Will</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Second Mystery</span>The Scourging at the Pillar</div>
+    <p class="meditation">Jesus is bound to a pillar and scourged by Roman soldiers, his body torn by their blows.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Mortification of the Senses</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Third Mystery</span>The Crowning with Thorns</div>
+    <p class="meditation">A crown of thorns is pressed onto Jesus&rsquo;s head and he is mocked as King of the Jews.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Moral Courage</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Fourth Mystery</span>The Carrying of the Cross</div>
+    <p class="meditation">Jesus carries his Cross through the streets of Jerusalem to Calvary, falling beneath its weight.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Patience</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Fifth Mystery</span>The Crucifixion</div>
+    <p class="meditation">Jesus is nailed to the Cross and dies for the sins of the world, giving his mother to the beloved disciple and commending his spirit to the Father.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Salvation / Perseverance</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+  </div>
+
+  <!-- GLORIOUS MYSTERIES -->
+  <div class="mystery-set" id="set-glorious">
+    <div class="section-title">The Glorious Mysteries</div>
+    <p class="rubric">Wednesday &amp; Sunday</p>
+
+    <div class="mystery-header"><span class="mystery-number">First Mystery</span>The Resurrection</div>
+    <p class="meditation">Jesus rises from the dead on the third day, triumphant over sin and death, appearing first to Mary Magdalene in the garden.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Faith</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Second Mystery</span>The Ascension</div>
+    <p class="meditation">Forty days after his Resurrection, Jesus ascends to heaven in the sight of his disciples, promising to send the Holy Spirit.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Hope / Desire for Heaven</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Third Mystery</span>The Descent of the Holy Spirit</div>
+    <p class="meditation">The Holy Spirit descends upon Mary and the Apostles gathered in the upper room at Pentecost, filling them with fire and courage.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Gifts of the Holy Spirit</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Fourth Mystery</span>The Assumption</div>
+    <p class="meditation">At the end of her earthly life, Mary is taken body and soul into heavenly glory by the power of God.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Grace of a Happy Death</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Fifth Mystery</span>The Coronation of Mary</div>
+    <p class="meditation">Mary is crowned Queen of Heaven and Earth by her Son, interceding for all humanity before the throne of God.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Trust in Mary&rsquo;s Intercession</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+  </div>
+
+  <!-- LUMINOUS MYSTERIES -->
+  <div class="mystery-set" id="set-luminous">
+    <div class="section-title">The Luminous Mysteries</div>
+    <p class="rubric">Thursday</p>
+
+    <div class="mystery-header"><span class="mystery-number">First Mystery</span>The Baptism of Jesus</div>
+    <p class="meditation">Jesus is baptized in the Jordan by John, and the Father&rsquo;s voice proclaims him the beloved Son as the Holy Spirit descends like a dove.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Openness to the Holy Spirit</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Second Mystery</span>The Wedding at Cana</div>
+    <p class="meditation">At Mary&rsquo;s quiet intercession, Jesus performs his first miracle, turning water into wine and revealing his glory to his disciples.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Fidelity / Trust in Mary&rsquo;s Intercession</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Third Mystery</span>The Proclamation of the Kingdom</div>
+    <p class="meditation">Jesus calls all to repentance and proclaims the Good News of God&rsquo;s Kingdom, forgiving sins and healing the broken-hearted.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Repentance / Trust in God</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Fourth Mystery</span>The Transfiguration</div>
+    <p class="meditation">Jesus is transfigured in blinding glory on Mount Tabor before Peter, James, and John, revealing his divine nature.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Desire for Holiness</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+
+    <div class="mystery-header"><span class="mystery-number">Fifth Mystery</span>The Institution of the Eucharist</div>
+    <p class="meditation">At the Last Supper, Jesus gives us his Body and Blood under the forms of bread and wine, instituting the Eucharist and the priesthood.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Eucharistic Adoration</div>
+    <p class="rubric">Our Father &mdash; ten Hail Marys &mdash; Glory Be &mdash; O my Jesus&hellip;</p>
+  </div>
+
+  <!-- CLOSING PRAYERS -->
+  <div class="divider">&#10011; &middot; &#10011; &middot; &#10011;</div>
+
+  <div class="section-title">Hail Holy Queen</div>
+  <div class="full-text">
+    Hail, Holy Queen, Mother of Mercy,<br>
+    our life, our sweetness and our hope.<br>
+    To thee do we cry, poor banished children of Eve;<br>
+    to thee do we send up our sighs,<br>
+    mourning and weeping in this valley of tears.<br>
+    Turn then, most gracious advocate,<br>
+    thine eyes of mercy toward us,<br>
+    and after this our exile,<br>
+    show unto us the blessed fruit of thy womb, Jesus.<br>
+    O clement, O loving, O sweet Virgin Mary.
+  </div>
+
+  <div class="section-title">Concluding Prayer</div>
+  <p class="rubric">The priest or leader prays:</p>
+  <div class="full-text">
+    O God, whose only-begotten Son,<br>
+    by his life, death, and resurrection,<br>
+    has purchased for us the rewards of eternal life,<br>
+    grant, we beseech thee,<br>
+    that meditating upon these mysteries<br>
+    of the most Holy Rosary of the Blessed Virgin Mary,<br>
+    we may imitate what they contain<br>
+    and obtain what they promise,<br>
+    through the same Christ our Lord.<br>
+    Amen.
+  </div>
+
+  <div class="section-title">Sign of the Cross</div>
+  <div class="full-text">
+    In the name of the Father,<br>
+    and of the Son,<br>
+    and of the Holy Spirit.<br>
+    Amen.
+  </div>
+
+  <div class="section-title">Prayer to St. Michael</div>
+  <p class="rubric">Prayed after the Rosary in many parishes, by request of Pope Leo XIII:</p>
+  <div class="full-text">
+    Saint Michael the Archangel,<br>
+    defend us in battle.<br>
+    Be our protection against the wickedness<br>
+    and snares of the devil.<br>
+    May God rebuke him, we humbly pray;<br>
+    and do thou, O Prince of the Heavenly Host,<br>
+    by the power of God,<br>
+    cast into hell Satan and all the evil spirits<br>
+    who prowl about the world<br>
+    seeking the ruin of souls.<br>
+    Amen.
+  </div>
+
+  <div class="divider">&#10011; &middot; &#10011; &middot; &#10011;</div>
+
+  <div class="install-tip">
+    <strong class="tip-title">&#128241; Save to Your iPhone Home Screen</strong>
+    You can keep this guide one tap away.<br><br>
+    1. Make sure you are reading this in <strong>Safari</strong><br>
+    2. Tap the <strong>Share button</strong> at the bottom of your screen &mdash; the box with an arrow pointing up &#8673;<br>
+    3. Scroll down in the menu that appears<br>
+    4. Tap <strong>&ldquo;Add to Home Screen&rdquo;</strong><br>
+    5. Tap <strong>Add</strong> &mdash; done &#10011;<br><br>
+    <em>The guide will appear as an icon on your home screen and open full-screen like an app.</em>
+  </div>
+
+</div>
+
+<script>
+var mysteryNames = {
+  joyful: 'The Joyful Mysteries',
+  sorrowful: 'The Sorrowful Mysteries',
+  glorious: 'The Glorious Mysteries',
+  luminous: 'The Luminous Mysteries'
+};
+
+var mysteryDays = {
+  joyful: 'Monday &amp; Saturday',
+  sorrowful: 'Tuesday &amp; Friday',
+  glorious: 'Wednesday &amp; Sunday',
+  luminous: 'Thursday'
+};
+
+function setMysteries(set) {
+  // Hide all
+  document.querySelectorAll('.mystery-set').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  // Show selected
+  var target = document.getElementById('set-' + set);
+  if (target) target.classList.add('active');
+  // Update pills
+  document.querySelectorAll('.mystery-pill').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.set === set);
+  });
+  // Update header
+  document.getElementById('mystery-title-display').textContent = mysteryNames[set];
+  document.getElementById('day-label').innerHTML = mysteryDays[set];
+}
+
+function getTodaySet() {
+  var day = new Date().getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+  if (day === 1 || day === 6) return 'joyful';
+  if (day === 2 || day === 5) return 'sorrowful';
+  if (day === 3 || day === 0) return 'glorious';
+  if (day === 4) return 'luminous';
+  return 'glorious';
+}
+
+// Init on load
+document.addEventListener('DOMContentLoaded', function() {
+  var today = getTodaySet();
+  document.getElementById('day-label').innerHTML = "Today&rsquo;s Mysteries &mdash; " + mysteryDays[today];
+  setMysteries(today);
+});
+</script>
+</body>
+</html>
