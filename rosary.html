@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rosary">
+<meta name="theme-color" content="#8b1a1a">
+<title>The Holy Rosary</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #b8963e;
+    --gold-light: #d4b56a;
+    --crimson: #8b1a1a;
+    --parchment: #f8f3e8;
+    --parchment-dark: #ede4cf;
+    --ink: #1a1209;
+    --ink-soft: #3d2e1a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--parchment);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%23b8963e' stroke-width='0.4' opacity='0.18'%3E%3Cline x1='30' y1='8' x2='30' y2='52'/%3E%3Cline x1='8' y1='30' x2='52' y2='30'/%3E%3C/g%3E%3C/svg%3E");
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 19px;
+    color: var(--ink);
+    line-height: 1.7;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 1.5rem 1.2rem;
+    padding-top: calc(1.5rem + env(safe-area-inset-top));
+  }
+
+  /* Header */
+  .app-header {
+    text-align: center;
+    padding: 1.5rem 0 1rem;
+    border-bottom: 2px solid var(--gold-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .cross-ornament {
+    color: var(--gold);
+    font-size: 1.4rem;
+    letter-spacing: 0.3em;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  h1.title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    color: var(--crimson);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+  }
+
+  .subtitle {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1rem;
+  }
+
+  /* Mystery selector */
+  .mystery-selector {
+    background: var(--parchment-dark);
+    border: 1px solid var(--gold-light);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mystery-day {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .mystery-title-display {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: var(--crimson);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+
+  .mystery-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .mystery-pill {
+    background: none;
+    border: 1px solid var(--gold-light);
+    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .mystery-pill.active {
+    background: var(--crimson);
+    border-color: var(--crimson);
+    color: #f5edda;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: var(--crimson);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 1.5rem 0 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--gold-light);
+  }
+
+  .mystery-header {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--crimson);
+    font-weight: 600;
+    margin: 2rem 0 0.3rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--parchment-dark);
+    border-left: 4px solid var(--crimson);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .mystery-number {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.1rem;
+  }
+
+  /* Prayers */
+  .full-text {
+    background: #faf6ee;
+    border-left: 4px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    padding: 0.8rem 1.1rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+    line-height: 1.8;
+  }
+
+  /* Rubric */
+  .rubric {
+    font-style: italic;
+    color: #6b1010;
+    font-size: 1rem;
+    margin: 0.8rem 0 0.4rem;
+    padding-left: 0.5rem;
+    line-height: 1.6;
+  }
+
+  /* Fruit block */
+  .fruit-block {
+    background: var(--parchment-dark);
+    border: 1px solid var(--gold-light);
+    border-radius: 6px;
+    padding: 0.5rem 0.9rem;
+    margin: 0.5rem 0 0.8rem;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+
+  .fruit-block strong {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Meditation */
+  .meditation {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 0.97rem;
+    margin: 0.3rem 0 0.5rem;
+    padding-left: 0.5rem;
+    border-left: 2px solid var(--gold-light);
+    line-height: 1.6;
+  }
+
+  /* Divider */
+  .divider {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+    margin: 1.5rem 0;
+  }
+
+  /* Note */
+  .note {
+    background: var(--parchment-dark);
+    border: 1px solid var(--gold-light);
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin: 0.6rem 0;
+    line-height: 1.6;
+  }
+
+  /* Install tip */
+  .install-tip {
+    margin: 2rem 0 0;
+    background: var(--parchment-dark);
+    border: 1px solid var(--gold-light);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+
+  .install-tip strong.tip-title {
+    font-family: 'Cinzel', serif;
+    color: var(--crimson);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Mystery sections hidden by default */
+  .mystery-set { display: none; }
+  .mystery-set.active { display: block; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="app-header">
+    <span class="cross-ornament">&#10011; &middot; &#10011; &middot; &#10011;</span>
+    <h1 class="title">The Holy Rosary</h1>
+    <p class="subtitle">A Complete Guide for Every Day</p>
+  </div>
+
+  <!-- Mystery Selector -->
+  <div class="mystery-selector">
+    <div class="mystery-day" id="day-label">Today&rsquo;s Mysteries</div>
+    <div class="mystery-title-display" id="mystery-title-display">The Glorious Mysteries</div>
+    <div class="mystery-pills">
+      <button class="mystery-pill" data-set="joyful" onclick="setMysteries('joyful')">Joyful</button>
+      <button class="mystery-pill" data-set="sorrowful" onclick="setMysteries('sorrowful')">Sorrowful</button>
+      <button class="mystery-pill" data-set="glorious" onclick="setMysteries('glorious')">Glorious</button>
+      <button class="mystery-pill" data-set="luminous" onclick="setMysteries('luminous')">Luminous</button>
+    </div>
+  </div>
+
+  <!-- OPENING -->
+  <div class="section-title">Opening</div>
+
+  <p class="rubric">Begin by making the Sign of the Cross:</p>
+  <div class="full-text">
+    In the name of the Father,<br>
+    and of the Son,<br>
+    and of the Holy Spirit.<br>
+    Amen.
+  </div>
+
+  <div class="section-title">Apostles&rsquo; Creed</div>
+  <p class="rubric">Hold the crucifix and pray:</p>
+  <div class="full-text">
+    I believe in God, the Father almighty,<br>
+    Creator of heaven and earth,<br>
+    and in Jesus Christ, his only Son, our Lord,<br>
+    who was conceived by the Holy Spirit,<br>
+    born of the Virgin Mary,<br>
+    suffered under Pontius Pilate,<br>
+    was crucified, died and was buried;<br>
+    he descended into hell;<br>
+    on the third day he rose again from the dead;<br>
+    he ascended into heaven,<br>
+    and is seated at the right hand of God the Father almighty;<br>
+    from there he will come to judge the living and the dead.<br>
+    I believe in the Holy Spirit,<br>
+    the holy catholic Church,<br>
+    the communion of saints,<br>
+    the forgiveness of sins,<br>
+    the resurrection of the body,<br>
+    and life everlasting.<br>
+    Amen.
+  </div>
+
+  <div class="section-title">Our Father</div>
+  <p class="rubric">On the first large bead, pray the Our Father:</p>
+  <div class="full-text">
+    Our Father, who art in heaven,<br>
+    hallowed be thy name;<br>
+    thy kingdom come,<br>
+    thy will be done<br>
+    on earth as it is in heaven.<br>
+    Give us this day our daily bread,<br>
+    and forgive us our trespasses,<br>
+    as we forgive those who trespass against us;<br>
+    and lead us not into temptation,<br>
+    but deliver us from evil.<br>
+    Amen.
+  </div>
+
+  <p class="rubric">On the next three beads, say one Hail Mary each for an increase in faith, hope, and charity:</p>
+  <div class="full-text">
+    Hail Mary, full of grace, the Lord is with thee.<br>
+    Blessed art thou among women,<br>
+    and blessed is the fruit of thy womb, Jesus.<br>
+    Holy Mary, Mother of God,<br>
+    pray for us sinners,<br>
+    now and at the hour of our death.<br>
+    Amen.
+  </div>
+
+  <div class="section-title">Glory Be</div>
+  <div class="full-text">
+    Glory be to the Father,<br>
+    and to the Son,<br>
+    and to the Holy Spirit.<br>
+    As it was in the beginning,<br>
+    is now, and ever shall be,<br>
+    world without end.<br>
+    Amen.
+  </div>
+
+  <div class="divider">&#10011; &middot; &#10011; &middot; &#10011;</div>
+
+  <!-- JOYFUL MYSTERIES -->
+  <div class="mystery-set" id="set-joyful">
+    <div class="section-title">The Joyful Mysteries</div>
+    <p class="rubric">Monday &amp; Saturday</p>
+
+    <div class="mystery-header"><span class="mystery-number">First Mystery</span>The Annunciation</div>
+    <p class="meditation">The Angel Gabriel announces to Mary that she will conceive the Son of God, and she responds with perfect trust: &ldquo;Be it done unto me according to thy word.&rdquo;</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Humility</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Second Mystery</span>The Visitation</div>
+    <p class="meditation">Mary visits her cousin Elizabeth, who is filled with the Holy Spirit and recognizes the Lord in Mary&rsquo;s womb.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Love of Neighbor</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Third Mystery</span>The Nativity</div>
+    <p class="meditation">Jesus, the Son of God, is born in a stable in Bethlehem, wrapped in swaddling clothes and laid in a manger.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Poverty of Spirit / Detachment</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Fourth Mystery</span>The Presentation</div>
+    <p class="meditation">Mary and Joseph present the infant Jesus in the Temple, fulfilling the Law, and Simeon prophesies that a sword will pierce Mary&rsquo;s own soul.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Obedience</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Fifth Mystery</span>The Finding in the Temple</div>
+    <p class="meditation">After three days of searching, Mary and Joseph find the twelve-year-old Jesus in the Temple, seated among the teachers, about his Father&rsquo;s business.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Zeal for the Things of God</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+  </div>
+
+  <!-- SORROWFUL MYSTERIES -->
+  <div class="mystery-set" id="set-sorrowful">
+    <div class="section-title">The Sorrowful Mysteries</div>
+    <p class="rubric">Tuesday &amp; Friday</p>
+
+    <div class="mystery-header"><span class="mystery-number">First Mystery</span>The Agony in the Garden</div>
+    <p class="meditation">Jesus prays in Gethsemane, so anguished that his sweat falls like drops of blood, yet he submits perfectly to the Father&rsquo;s will.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Contrition / Conformity to God&rsquo;s Will</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Second Mystery</span>The Scourging at the Pillar</div>
+    <p class="meditation">Jesus is bound to a pillar and scourged by Roman soldiers, his body torn by their blows.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Mortification of the Senses</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Third Mystery</span>The Crowning with Thorns</div>
+    <p class="meditation">A crown of thorns is pressed onto Jesus&rsquo;s head and he is mocked as King of the Jews.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Moral Courage</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Fourth Mystery</span>The Carrying of the Cross</div>
+    <p class="meditation">Jesus carries his Cross through the streets of Jerusalem to Calvary, falling beneath its weight.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Patience</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Fifth Mystery</span>The Crucifixion</div>
+    <p class="meditation">Jesus is nailed to the Cross and dies for the sins of the world, giving his mother to the beloved disciple and commending his spirit to the Father.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Salvation / Perseverance</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+  </div>
+
+  <!-- GLORIOUS MYSTERIES -->
+  <div class="mystery-set" id="set-glorious">
+    <div class="section-title">The Glorious Mysteries</div>
+    <p class="rubric">Wednesday &amp; Sunday</p>
+
+    <div class="mystery-header"><span class="mystery-number">First Mystery</span>The Resurrection</div>
+    <p class="meditation">Jesus rises from the dead on the third day, triumphant over sin and death, appearing first to Mary Magdalene in the garden.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Faith</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Second Mystery</span>The Ascension</div>
+    <p class="meditation">Forty days after his Resurrection, Jesus ascends to heaven in the sight of his disciples, promising to send the Holy Spirit.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Hope / Desire for Heaven</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Third Mystery</span>The Descent of the Holy Spirit</div>
+    <p class="meditation">The Holy Spirit descends upon Mary and the Apostles gathered in the upper room at Pentecost, filling them with fire and courage.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Gifts of the Holy Spirit</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Fourth Mystery</span>The Assumption</div>
+    <p class="meditation">At the end of her earthly life, Mary is taken body and soul into heavenly glory by the power of God.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Grace of a Happy Death</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Fifth Mystery</span>The Coronation of Mary</div>
+    <p class="meditation">Mary is crowned Queen of Heaven and Earth by her Son, interceding for all humanity before the throne of God.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Trust in Mary&rsquo;s Intercession</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+  </div>
+
+  <!-- LUMINOUS MYSTERIES -->
+  <div class="mystery-set" id="set-luminous">
+    <div class="section-title">The Luminous Mysteries</div>
+    <p class="rubric">Thursday</p>
+
+    <div class="mystery-header"><span class="mystery-number">First Mystery</span>The Baptism of Jesus</div>
+    <p class="meditation">Jesus is baptized in the Jordan by John, and the Father&rsquo;s voice proclaims him the beloved Son as the Holy Spirit descends like a dove.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Openness to the Holy Spirit</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Second Mystery</span>The Wedding at Cana</div>
+    <p class="meditation">At Mary&rsquo;s quiet intercession, Jesus performs his first miracle, turning water into wine and revealing his glory to his disciples.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Fidelity / Trust in Mary&rsquo;s Intercession</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Third Mystery</span>The Proclamation of the Kingdom</div>
+    <p class="meditation">Jesus calls all to repentance and proclaims the Good News of God&rsquo;s Kingdom, forgiving sins and healing the broken-hearted.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Repentance / Trust in God</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Fourth Mystery</span>The Transfiguration</div>
+    <p class="meditation">Jesus is transfigured in blinding glory on Mount Tabor before Peter, James, and John, revealing his divine nature.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Desire for Holiness</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+
+    <div class="mystery-header"><span class="mystery-number">Fifth Mystery</span>The Institution of the Eucharist</div>
+    <p class="meditation">At the Last Supper, Jesus gives us his Body and Blood under the forms of bread and wine, instituting the Eucharist and the priesthood.</p>
+    <div class="fruit-block"><strong>Fruit of this Mystery</strong><br>Eucharistic Adoration</div>
+    <p class="rubric">Say the Our Father:</p>
+    <div class="full-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+    <p class="rubric">Say ten Hail Marys:</p>
+    <div class="full-text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</div>
+    <p class="rubric">Say the Glory Be:</p>
+    <div class="full-text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+    <p class="rubric">Fatima Prayer:</p>
+    <div class="full-text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those in most need of thy mercy. Amen.</div>
+  </div>
+
+  <!-- CLOSING PRAYERS -->
+  <div class="divider">&#10011; &middot; &#10011; &middot; &#10011;</div>
+
+  <div class="section-title">Hail Holy Queen</div>
+  <div class="full-text">
+    Hail, Holy Queen, Mother of Mercy,<br>
+    our life, our sweetness and our hope.<br>
+    To thee do we cry, poor banished children of Eve;<br>
+    to thee do we send up our sighs,<br>
+    mourning and weeping in this valley of tears.<br>
+    Turn then, most gracious advocate,<br>
+    thine eyes of mercy toward us,<br>
+    and after this our exile,<br>
+    show unto us the blessed fruit of thy womb, Jesus.<br>
+    O clement, O loving, O sweet Virgin Mary.
+  </div>
+
+  <div class="section-title">Concluding Prayer</div>
+  <p class="rubric">The priest or leader prays:</p>
+  <div class="full-text">
+    O God, whose only-begotten Son,<br>
+    by his life, death, and resurrection,<br>
+    has purchased for us the rewards of eternal life,<br>
+    grant, we beseech thee,<br>
+    that meditating upon these mysteries<br>
+    of the most Holy Rosary of the Blessed Virgin Mary,<br>
+    we may imitate what they contain<br>
+    and obtain what they promise,<br>
+    through the same Christ our Lord.<br>
+    Amen.
+  </div>
+
+  <div class="section-title">Sign of the Cross</div>
+  <div class="full-text">
+    In the name of the Father,<br>
+    and of the Son,<br>
+    and of the Holy Spirit.<br>
+    Amen.
+  </div>
+
+  <div class="section-title">Prayer to St. Michael</div>
+  <p class="rubric">Prayed after the Rosary in many parishes, by request of Pope Leo XIII:</p>
+  <div class="full-text">
+    Saint Michael the Archangel,<br>
+    defend us in battle.<br>
+    Be our protection against the wickedness<br>
+    and snares of the devil.<br>
+    May God rebuke him, we humbly pray;<br>
+    and do thou, O Prince of the Heavenly Host,<br>
+    by the power of God,<br>
+    cast into hell Satan and all the evil spirits<br>
+    who prowl about the world<br>
+    seeking the ruin of souls.<br>
+    Amen.
+  </div>
+
+  <div class="divider">&#10011; &middot; &#10011; &middot; &#10011;</div>
+
+  <div class="install-tip">
+    <strong class="tip-title">&#128241; Save to Your iPhone Home Screen</strong>
+    You can keep this guide one tap away.<br><br>
+    1. Make sure you are reading this in <strong>Safari</strong><br>
+    2. Tap the <strong>Share button</strong> at the bottom of your screen &mdash; the box with an arrow pointing up &#8673;<br>
+    3. Scroll down in the menu that appears<br>
+    4. Tap <strong>&ldquo;Add to Home Screen&rdquo;</strong><br>
+    5. Tap <strong>Add</strong> &mdash; done &#10011;<br><br>
+    <em>The guide will appear as an icon on your home screen and open full-screen like an app.</em>
+  </div>
+
+</div>
+
+<script>
+var mysteryNames = {
+  joyful: 'The Joyful Mysteries',
+  sorrowful: 'The Sorrowful Mysteries',
+  glorious: 'The Glorious Mysteries',
+  luminous: 'The Luminous Mysteries'
+};
+
+var mysteryDays = {
+  joyful: 'Monday &amp; Saturday',
+  sorrowful: 'Tuesday &amp; Friday',
+  glorious: 'Wednesday &amp; Sunday',
+  luminous: 'Thursday'
+};
+
+function setMysteries(set) {
+  // Hide all
+  document.querySelectorAll('.mystery-set').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  // Show selected
+  var target = document.getElementById('set-' + set);
+  if (target) target.classList.add('active');
+  // Update pills
+  document.querySelectorAll('.mystery-pill').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.set === set);
+  });
+  // Update header
+  document.getElementById('mystery-title-display').textContent = mysteryNames[set];
+  document.getElementById('day-label').innerHTML = mysteryDays[set];
+}
+
+function getTodaySet() {
+  var day = new Date().getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+  if (day === 1 || day === 6) return 'joyful';
+  if (day === 2 || day === 5) return 'sorrowful';
+  if (day === 3 || day === 0) return 'glorious';
+  if (day === 4) return 'luminous';
+  return 'glorious';
+}
+
+// Init on load
+document.addEventListener('DOMContentLoaded', function() {
+  var today = getTodaySet();
+  document.getElementById('day-label').innerHTML = "Today&rsquo;s Mysteries &mdash; " + mysteryDays[today];
+  setMysteries(today);
+});
+</script>
+</body>
+</html>
