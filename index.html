@@ -66,7 +66,7 @@
     color: var(--ink-soft);
     font-style: italic;
     margin-top: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 
   .legend {
@@ -74,21 +74,21 @@
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 1rem 2rem;
+    padding: 1.4rem 2rem;
     background: var(--parchment-dark);
     border-bottom: 1px solid var(--gold-light);
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
 
   .legend-item {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.6rem;
   }
 
   .dot {
-    width: 14px; height: 14px;
-    border-radius: 3px;
+    width: 22px; height: 22px;
+    border-radius: 5px;
     flex-shrink: 0;
   }
   .dot-response { background: #c8a84b; }
@@ -104,13 +104,13 @@
 
   .part-header {
     font-family: 'Cinzel', serif;
-    font-size: 1rem;
+    font-size: 1.65rem;
     color: var(--gold);
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin: 2.5rem 0 0.3rem;
-    padding-bottom: 0.3rem;
-    border-bottom: 1px solid var(--gold-light);
+    letter-spacing: 0.12em;
+    margin: 2.8rem 0 0.4rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--gold);
   }
 
   .section-title {
@@ -154,12 +154,14 @@
   .priest-line {
     background: var(--priest-bg);
     border-left: 3px solid #b8a880;
+    font-size: 1.45rem;
   }
 
   .response-line {
     background: #f5edda;
     border-left: 4px solid var(--gold);
     font-weight: 600;
+    font-size: 1.45rem;
     color: #4a3510;
   }
 
@@ -167,6 +169,7 @@
     background: linear-gradient(to right, var(--priest-bg) 0%, #f5edda 100%);
     border-left: 4px solid var(--gold);
     font-weight: 600;
+    font-size: 1.45rem;
     color: #4a3510;
   }
 
@@ -217,7 +220,7 @@
     margin: 0.3rem 0 0.8rem;
     font-weight: 600;
     color: #3d2a0a;
-    font-size: 1.05rem;
+    font-size: 1.45rem;
     line-height: 1.6;
   }
 
@@ -253,41 +256,41 @@
     background: var(--parchment-dark);
     border: 1px solid var(--gold-light);
     border-radius: 8px;
-    padding: 1.2rem 1.5rem;
+    padding: 1.6rem 1.8rem;
     margin: 1.5rem 0;
   }
 
   .toc h3 {
     font-family: 'Cinzel', serif;
-    font-size: 1.05rem;
+    font-size: 1.7rem;
     color: var(--crimson);
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.1rem;
     letter-spacing: 0.1em;
   }
 
   .toc-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.4rem 1rem;
-    font-size: 1rem;
+    gap: 0.6rem 1rem;
+    font-size: 1.3rem;
   }
 
   .toc a {
     color: var(--ink-soft);
     text-decoration: none;
-    padding: 0.2rem 0;
+    padding: 0.3rem 0;
   }
 
   .toc a:hover { color: var(--crimson); }
 
   .toc .part-label {
     font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     color: var(--gold);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     grid-column: 1 / -1;
-    margin-top: 0.6rem;
+    margin-top: 0.9rem;
   }
 
   @media (max-width: 600px) {
@@ -295,10 +298,12 @@
     .speaker { width: 50px; font-size: 0.62rem; }
     .toc-grid { grid-template-columns: 1fr; }
     .priest-line, .response-line, .both-line { padding: 0.55rem 0.8rem; }
-    .full-text { font-size: 0.97rem; padding: 0.7rem 0.9rem; }
+    .full-text { font-size: 1.3rem; padding: 0.7rem 0.9rem; }
+    .priest-line { font-size: 1.3rem; }
     header { padding: 2rem 1.2rem 1.5rem; }
     .container { padding: 1rem 1rem 5rem; }
-    h2.big-section { font-size: 1.25rem; }
+    h2.big-section { font-size: 1.8rem; }
+    .response-line, .both-line { font-size: 1.3rem; }
   }
 
   /* iPhone notch / Dynamic Island safe area */
@@ -321,12 +326,12 @@
 
   h2.big-section {
     font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     color: var(--crimson);
     text-align: center;
-    padding: 1.5rem 0 0.5rem;
-    border-top: 2px solid var(--gold);
-    margin-top: 2.5rem;
+    padding: 1.8rem 0 0.6rem;
+    border-top: 3px solid var(--gold);
+    margin-top: 3rem;
     letter-spacing: 0.08em;
   }
 
@@ -354,6 +359,197 @@
     color: white;
   }
   /* lang visibility controlled entirely by JS inline styles */
+
+  /* ── Mass Reading Flow ─────────────────────────────────────── */
+  .mass-reading {
+    margin: 0 0 1.2rem;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  }
+  .mass-reading-header {
+    background: var(--parchment-dark);
+    border-left: 4px solid var(--gold);
+    padding: 0.5rem 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .mass-reading-body {
+    background: #faf6ee;
+    border-left: 4px solid var(--gold);
+    padding: 0.7rem 1rem;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.45rem;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .mass-reading-body p { margin: 0 0 0.5em; }
+  .mass-reading-body p:last-child { margin-bottom: 0; }
+  .mass-response {
+    border-left: 4px solid var(--gold);
+  }
+  .mass-call {
+    background: var(--priest-bg);
+    border-left: none;
+    border-top: 1px solid rgba(184,150,62,0.2);
+    padding: 0.45rem 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    font-size: 1.45rem;
+    font-family: 'EB Garamond', serif;
+  }
+  .mass-people {
+    background: #f5edda;
+    border-left: none;
+    padding: 0.45rem 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    font-size: 1.45rem;
+    font-weight: 600;
+    font-family: 'EB Garamond', serif;
+    color: #4a3510;
+  }
+  .mass-people .speaker { color: var(--gold); opacity: 1; font-weight: 600; }
+
+  /* ── Psalm Block ───────────────────────────────────────────── */
+  .psalm-block {
+    background: #faf6ee;
+    border-left: 4px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    padding: 0.85rem 1.1rem;
+    margin: 0.3rem 0 1rem;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.45rem;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .psalm-citation {
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .psalm-refrain {
+    font-weight: 700;
+    color: var(--crimson);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
+  .psalm-refrain-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.66rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    display: block;
+    margin-bottom: 0.15rem;
+    font-style: normal;
+  }
+  .psalm-verse {
+    margin: 0.5rem 0;
+    padding-left: 0.5rem;
+    border-left: 2px solid rgba(184,150,62,0.3);
+  }
+  .psalm-verse p { margin: 0 0 0.2em; }
+
+
+  .readings-block {
+    background: var(--parchment-dark);
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    margin: 0 0 1.2rem;
+  }
+  .readings-season {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    color: var(--crimson);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 0.1rem;
+  }
+  .readings-date {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.65rem;
+  }
+  .reading-item {
+    border-bottom: 1px solid rgba(184,150,62,0.25);
+    padding: 0.15rem 0;
+  }
+  .reading-item:last-of-type { border-bottom: none; }
+  .reading-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0.35rem 0;
+    cursor: pointer;
+    gap: 0.5rem;
+    text-align: left;
+  }
+  .reading-toggle-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+  }
+  .reading-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.66rem;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .reading-cite {
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+    color: var(--crimson);
+    font-style: italic;
+  }
+  .reading-chevron {
+    font-size: 0.65rem;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+  .reading-chevron.open { transform: rotate(180deg); }
+  .reading-body {
+    display: none;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--ink);
+    padding: 0.5rem 0 0.7rem;
+  }
+  .reading-body p { margin: 0 0 0.6em; }
+  .reading-body p:last-child { margin-bottom: 0; }
+  .readings-footer {
+    display: block;
+    text-align: right;
+    font-family: 'Cinzel', serif;
+    font-size: 0.64rem;
+    color: var(--gold);
+    text-decoration: none;
+    margin-top: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+  .readings-loading {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    padding: 0.3rem 0;
+  }
 
 </style>
 </head>
@@ -575,16 +771,23 @@
 
   <!-- READINGS -->
   <div class="part-header">Liturgy of the Word</div>
-  <div class="section-title" id="readings">Readings</div>
+
   <p class="rubric">Typically: First Reading (OT) &rarr; Responsorial Psalm &rarr; Second Reading (NT, Sundays) &rarr; Gospel Acclamation &rarr; Gospel</p>
 
+  <div class="section-title" id="readings">Readings</div>
   <div class="exchange">
     <div class="priest-line"><span class="speaker">Lector</span><span>A reading from&hellip; <em>[reads]</em> &hellip; The word of the Lord.</span></div>
     <div class="response-line"><span class="speaker">People</span><span>Thanks be to God.</span></div>
   </div>
 
+  <!-- DAILY READINGS BLOCK -->
+  <div class="section-title">Today&rsquo;s Readings</div>
+  <div id="daily-readings" class="readings-block">
+    <div class="readings-loading">Loading today&rsquo;s readings&hellip;</div>
+  </div>
+
   <div class="section-title">Responsorial Psalm</div>
-  <p class="rubric">The cantor sings the psalm. The response is printed in the bulletin or projected. You repeat the refrain after the cantor sings it the first time, then after each verse.</p>
+  <p class="rubric">The cantor sings the psalm. You repeat the refrain after the cantor sings it the first time, then after each verse.</p>
 
   <div class="section-title">Gospel Acclamation</div>
   <p class="rubric">All stand. The cantor sings the acclamation and the people repeat it.</p>
@@ -767,9 +970,23 @@
   <p class="rubric">"Save us, Savior of the world, for by your Cross and Resurrection you have set us free."</p>
 
   <div class="section-title">Concluding Doxology</div>
-  <div class="exchange">
-    <div class="priest-line"><span class="speaker">Priest</span><span>Through him, and with him, and in him, O God, almighty Father, in the unity of the Holy Spirit, all glory and honor is yours, for ever and ever.</span></div>
-    <div class="response-line"><span class="speaker">People</span><span>Amen.</span></div>
+  <div id="doxology-section">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="english" onclick="setLang('doxology-section','english')">English</button>
+      <button class="lang-btn" data-lang="latin" onclick="setLang('doxology-section','latin')">Latin</button>
+    </div>
+    <div class="lang-english">
+      <div class="exchange">
+        <div class="priest-line"><span class="speaker">Priest</span><span>Through him, and with him, and in him, O God, almighty Father, in the unity of the Holy Spirit, all glory and honor is yours, for ever and ever.</span></div>
+        <div class="response-line"><span class="speaker">People</span><span>Amen.</span></div>
+      </div>
+    </div>
+    <div class="lang-latin" style="display:none">
+      <div class="exchange">
+        <div class="priest-line"><span class="speaker">Priest</span><span>Per ipsum, et cum ipso, et in ipso, est tibi Deo Patri omnipotenti, in unitate Spiritus Sancti, omnis honor et gloria per omnia saecula saeculorum.</span></div>
+        <div class="response-line"><span class="speaker">People</span><span>Amen.</span></div>
+      </div>
+    </div>
   </div>
   <div class="note">This "Great Amen" is the most important Amen in the Mass &mdash; the people's assent to the entire Eucharistic Prayer. Sung congregations often sing it boldly three times.</div>
 
@@ -856,7 +1073,11 @@
 
   <!-- POST COMMUNION -->
   <div class="section-title">Prayer after Communion</div>
-  <p class="rubric">All stand. The priest says the prayer:</p>
+  <p class="rubric">All stand.</p>
+  <div class="exchange">
+    <div class="priest-line"><span class="speaker">Priest</span><span>Let us pray.</span></div>
+  </div>
+  <p class="rubric"><em>(Pause for silent prayer, then the priest prays aloud.)</em></p>
   <div class="exchange">
     <div class="priest-line"><span class="speaker">Priest</span><span>&hellip;through Christ our Lord. <em>(or similar ending)</em></span></div>
     <div class="response-line"><span class="speaker">People</span><span>Amen.</span></div>
@@ -870,7 +1091,11 @@
     <div class="response-line"><span class="speaker">People</span><span>And with your spirit.</span></div>
   </div>
 
-  <p class="rubric">The priest gives the final blessing. If a deacon or bishop is present, he may give it. The people bow their heads:</p>
+  <p class="rubric">The priest gives the final blessing. If a deacon or bishop is present, he may give it.</p>
+  <div class="exchange">
+    <div class="priest-line"><span class="speaker">Priest</span><span>Bow your heads and pray for God's blessing.</span></div>
+  </div>
+  <p class="rubric">The people bow their heads in silent prayer, then:</p>
 
   <div class="exchange">
     <div class="priest-line"><span class="speaker">Priest</span><span>May almighty God bless you: the Father, and the Son, &#10011; and the Holy Spirit.</span></div>
@@ -1008,6 +1233,191 @@ function setLang(section, lang) {
     el.style.display = lang === 'english' ? 'block' : 'none';
   });
 }
+
+  // ── Daily Readings ──────────────────────────────────────────────
+  (function () {
+    var PROXY = 'https://api.codetabs.com/v1/proxy?quest=';
+    var LECTIONARY_API = 'https://cpbjr.github.io/catholic-readings-api/readings/';
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function formatDate(d) {
+      return d.toLocaleDateString('en-US', {
+        weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
+      });
+    }
+
+    function render(html) {
+      var el = document.getElementById('daily-readings');
+      if (el) el.innerHTML = html;
+    }
+
+    function parseAllReadings(html) {
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(html, 'text/html');
+      var results = {};
+      doc.querySelectorAll('.content-header').forEach(function (hdr) {
+        var h3 = hdr.querySelector('h3.name');
+        if (!h3) return;
+        var name = h3.textContent.trim().toLowerCase();
+        var addr = hdr.querySelector('.address');
+        var citation = addr ? addr.textContent.trim() : '';
+        var body = hdr.nextElementSibling;
+        var parts = [];
+        if (body && body.classList.contains('content-body')) {
+          body.querySelectorAll('p').forEach(function (p) {
+            var t = p.textContent.trim();
+            if (t) parts.push(t);
+          });
+        }
+        results[name] = { citation: citation, parts: parts };
+      });
+      return results;
+    }
+
+    function buildPsalmHtml(data) {
+      if (!data || !data.parts || !data.parts.length) return '';
+      var out = '';
+      if (data.citation) {
+        out += '<div class="psalm-citation">' + data.citation + '</div>';
+      }
+      data.parts.forEach(function (t) {
+        if (t.match(/^R[\.\)]/i) || t.match(/^Refrain/i)) {
+          out += '<div class="psalm-refrain">'
+               + '<span class="psalm-refrain-label">Refrain</span>'
+               + t + '</div>';
+        } else {
+          out += '<div class="psalm-verse"><p>' + t + '</p></div>';
+        }
+      });
+      return out;
+    }
+
+    function buildMassFlow(lect, allReadings, dateStr, cfmUrl) {
+      var r = lect.readings || {};
+      var out = '';
+
+      if (lect.season) {
+        out += '<div class="readings-season">' + lect.season + '</div>';
+      }
+      out += '<div class="readings-date">' + dateStr + '</div>';
+
+      // First Reading
+      if (r.firstReading) {
+        var r1 = allReadings['reading 1'] || {};
+        out += '<div class="mass-reading">'
+             + '<div class="mass-reading-header">'
+             + '<span class="reading-label">First Reading</span>'
+             + '<span class="reading-cite">' + r.firstReading + '</span>'
+             + '</div>'
+             + '<div class="mass-reading-body">';
+        if (r1.parts && r1.parts.length) {
+          r1.parts.forEach(function (t) { out += '<p>' + t + '</p>'; });
+        }
+        out += '</div>'
+             + '<div class="mass-response">'
+             + '<div class="mass-call"><span class="speaker">Lector</span><span>The word of the Lord.</span></div>'
+             + '<div class="mass-people"><span class="speaker">People</span><span>Thanks be to God.</span></div>'
+             + '</div>'
+             + '</div>';
+      }
+
+      // Responsorial Psalm
+      if (r.psalm) {
+        var ps = allReadings['responsorial psalm'] || {};
+        out += '<div class="mass-reading">'
+             + '<div class="mass-reading-header">'
+             + '<span class="reading-label">Responsorial Psalm</span>'
+             + '<span class="reading-cite">' + r.psalm + '</span>'
+             + '</div>'
+             + '<div class="mass-reading-body psalm-body">'
+             + buildPsalmHtml(ps)
+             + '</div>'
+             + '</div>';
+      }
+
+      // Second Reading (Sundays)
+      if (r.secondReading) {
+        var r2 = allReadings['reading 2'] || {};
+        out += '<div class="mass-reading">'
+             + '<div class="mass-reading-header">'
+             + '<span class="reading-label">Second Reading</span>'
+             + '<span class="reading-cite">' + r.secondReading + '</span>'
+             + '</div>'
+             + '<div class="mass-reading-body">';
+        if (r2.parts && r2.parts.length) {
+          r2.parts.forEach(function (t) { out += '<p>' + t + '</p>'; });
+        }
+        out += '</div>'
+             + '<div class="mass-response">'
+             + '<div class="mass-call"><span class="speaker">Lector</span><span>The word of the Lord.</span></div>'
+             + '<div class="mass-people"><span class="speaker">People</span><span>Thanks be to God.</span></div>'
+             + '</div>'
+             + '</div>';
+      }
+
+      // Gospel
+      if (r.gospel) {
+        var gsp = allReadings['gospel'] || {};
+        out += '<div class="mass-reading">'
+             + '<div class="mass-reading-header">'
+             + '<span class="reading-label">Gospel</span>'
+             + '<span class="reading-cite">' + r.gospel + '</span>'
+             + '</div>'
+             + '<div class="mass-reading-body">';
+        if (gsp.parts && gsp.parts.length) {
+          gsp.parts.forEach(function (t) { out += '<p>' + t + '</p>'; });
+        }
+        out += '</div>'
+             + '<div class="mass-response">'
+             + '<div class="mass-call"><span class="speaker">Priest</span><span>The Gospel of the Lord.</span></div>'
+             + '<div class="mass-people"><span class="speaker">People</span><span>Praise to you, Lord Jesus Christ.</span></div>'
+             + '</div>'
+             + '</div>';
+      }
+
+      out += '<a class="readings-footer" href="' + cfmUrl + '" target="_blank">Source: USCCB &rarr;</a>';
+      return out;
+    }
+
+    function load() {
+      var d = new Date();
+      var dateStr = formatDate(d);
+      var yyyy = d.getFullYear();
+      var mm = pad(d.getMonth() + 1);
+      var dd = pad(d.getDate());
+      var lectUrl = LECTIONARY_API + yyyy + '/' + mm + '-' + dd + '.json';
+
+      fetch(lectUrl)
+        .then(function (r) {
+          if (!r.ok) throw new Error('Not found');
+          return r.json();
+        })
+        .then(function (lect) {
+          var cfmUrl = lect.usccbLink || 'https://bible.usccb.org/daily-bible-reading';
+          render('<div class="readings-loading">Loading readings&hellip;</div>');
+          return fetch(PROXY + encodeURIComponent(cfmUrl))
+            .then(function (r) { return r.text(); })
+            .then(function (html) {
+              var allReadings = parseAllReadings(html);
+              render(buildMassFlow(lect, allReadings, dateStr, cfmUrl));
+            });
+        })
+        .catch(function () {
+          render('<div class="readings-loading">Readings unavailable. '
+               + '<a href="https://bible.usccb.org/daily-bible-reading" '
+               + 'target="_blank" style="color:var(--gold)">View on USCCB &rarr;</a></div>');
+        });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', load);
+    } else {
+      load();
+    }
+  })();
+  // ── End Daily Readings ──────────────────────────────────────────
+
 </script>
 
 </body>
