@@ -1356,6 +1356,30 @@ function setLang(section, lang) {
              + '</div>';
       }
 
+      // Gospel Acclamation
+      out += '<div class="mass-reading">'
+           + '<div class="mass-reading-header">'
+           + '<span class="reading-label">Gospel Acclamation</span>'
+           + '<span class="reading-cite">All stand</span>'
+           + '</div>'
+           + '<div class="mass-reading-body">'
+           + '<p><em>The cantor sings the acclamation; the people repeat it.</em></p>'
+           + '</div>'
+           + '</div>';
+
+      // Gospel introduction exchange
+      out += '<div class="mass-reading">'
+           + '<div class="mass-reading-body" style="padding:0">'
+           + '<div class="mass-call"><span class="speaker">Priest</span><span>The Lord be with you.</span></div>'
+           + '<div class="mass-people"><span class="speaker">People</span><span>And with your spirit.</span></div>'
+           + '<div class="mass-call"><span class="speaker">Priest</span><span>A reading from the holy Gospel according to N.</span></div>'
+           + '<div class="mass-people"><span class="speaker">People</span><span>Glory to you, O Lord.</span></div>'
+           + '</div>'
+           + '<div class="mass-reading-body" style="font-style:italic;font-size:1.3rem;line-height:1.6;border-left:4px solid var(--gold)">'
+           + 'At these words, trace a small cross with your thumb on your forehead, lips, and heart &mdash; may this Gospel be in my mind, on my lips, and in my heart.'
+           + '</div>'
+           + '</div>';
+
       // Gospel
       if (r.gospel) {
         var gsp = allReadings['gospel'] || {};
