@@ -436,27 +436,32 @@
     margin-bottom: 0.6rem;
   }
   .psalm-refrain {
+    font-size: 1.45rem;
     font-weight: 700;
-    color: var(--crimson);
-    margin-bottom: 0.5rem;
-    font-style: italic;
+    color: var(--ink);
+    margin: 0.7rem 0 0.4rem;
+    line-height: 1.5;
   }
   .psalm-refrain-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.66rem;
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    display: block;
-    margin-bottom: 0.15rem;
-    font-style: normal;
+    display: none;
   }
   .psalm-verse {
-    margin: 0.5rem 0;
-    padding-left: 0.5rem;
-    border-left: 2px solid rgba(184,150,62,0.3);
+    margin: 0 0 0.3rem 0;
+    font-style: normal;
   }
-  .psalm-verse p { margin: 0 0 0.2em; }
+  .psalm-verse p { margin: 0 0 0.5em; font-size: 1.45rem; line-height: 1.6; }
+
+  .psalm-section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 0.9rem 0.1rem;
+    background: var(--parchment-dark);
+    border-left: 4px solid var(--gold);
+    border-top: 1px solid rgba(184,150,62,0.2);
+  }
 
 
   .readings-block {
@@ -785,9 +790,6 @@
   <div id="daily-readings" class="readings-block">
     <div class="readings-loading">Loading today&rsquo;s readings&hellip;</div>
   </div>
-
-  <div class="section-title">Responsorial Psalm</div>
-  <p class="rubric">The cantor sings the psalm. You repeat the refrain after the cantor sings it the first time, then after each verse.</p>
 
   <div class="section-title">Gospel Acclamation</div>
   <p class="rubric">All stand. The cantor sings the acclamation and the people repeat it.</p>
@@ -1281,15 +1283,38 @@ function setLang(section, lang) {
       if (data.citation) {
         out += '<div class="psalm-citation">' + data.citation + '</div>';
       }
-      data.parts.forEach(function (t) {
-        if (t.match(/^R[\.\)]/i) || t.match(/^Refrain/i)) {
-          out += '<div class="psalm-refrain">'
-               + '<span class="psalm-refrain-label">Refrain</span>'
-               + t + '</div>';
-        } else {
-          out += '<div class="psalm-verse"><p>' + t + '</p></div>';
+
+      // USCCB psalm is one run-together paragraph with embedded R. markers
+      var fullText = data.parts.join(' ');
+
+      // Preserve the first R. parenthetical e.g. "(19a)"
+      var firstParens = '';
+      var firstParenMatch = fullText.match(/^R\.\s*(\([^)]+\))\s*/);
+      if (firstParenMatch) firstParens = firstParenMatch[1] + ' ';
+
+      // Split on R. markers (strip optional parenthetical)
+      var segments = fullText.split(/R\.\s*(?:\([^)]+\)\s*)?/);
+
+      segments.forEach(function(seg, i) {
+        var t = seg.trim();
+        if (!t) return;
+
+        // First sentence = refrain (up to first period)
+        var dotIdx = t.indexOf('.');
+        var refrain = dotIdx >= 0 ? t.substring(0, dotIdx + 1).trim() : t;
+        var verse   = dotIdx >= 0 ? t.substring(dotIdx + 1).trim() : '';
+
+        // Render refrain bold with R. label
+        var label = (i === 0) ? 'R. ' + firstParens : 'R. ';
+        out += '<div class="psalm-refrain"><strong>' + label + refrain + '</strong></div>';
+
+        // Render verse in normal weight — fix run-together sentences
+        if (verse) {
+          var spaced = verse.replace(/([.;,])([A-Z])/g, '$1 $2');
+          out += '<div class="psalm-verse"><p>' + spaced + '</p></div>';
         }
       });
+
       return out;
     }
 
